@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import CurrentPositions from "./CurrentPositions";
 import WatchList from "./WatchList";
+import TransactionList from "./TransactionsList";
 
 function App() {
   // code to retrieve stock info
@@ -29,9 +30,7 @@ function App() {
       <Header />
       <CurrentPositions />
       <WatchList />
-      <article>
-        <h2>Transaction History</h2>
-      </article>
+      <TransactionList />
     </>
   );
 }

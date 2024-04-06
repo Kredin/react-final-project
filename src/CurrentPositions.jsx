@@ -34,3 +34,5 @@ function CurrentPositions() {
     </div>
   );
 }
+
+export default CurrentPositions;

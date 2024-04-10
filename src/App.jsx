@@ -25,6 +25,21 @@ function App() {
 
   // fetchstocks();
 
+  const [transactions, setTransactions] = useState(fetchTransactions);
+
+  function fetchTransactions() {
+    fetch("http://localhost:3000/transactions", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setTransactions(data));
+  }
+
+  console.log(transactions);
+
   return (
     <>
       <Header />

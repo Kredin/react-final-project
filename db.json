@@ -1,8 +1,10 @@
 {"transactions": [
-    {"ticker": "SPY",
+    {"action": "BUY",
+    "ticker": "SPY",
     "quantity": 5,
     "price": 716},
-    {"ticker": "AAPL",
+    {"action": "BUY",
+    "ticker": "AAPL",
     "quantity": 1,
     "price": 150}
 ]}

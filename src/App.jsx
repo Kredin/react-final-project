@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import CurrentPositions from "./CurrentPositions";
 import WatchList from "./WatchList";
@@ -24,13 +24,25 @@ function App() {
   // }
 
   // fetchstocks();
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/Data", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setTransactions(data.transactions));
+  }, []);
 
   return (
     <>
       <Header />
       <CurrentPositions />
       <WatchList />
-      <TransactionList />
+      <TransactionList transactions={transactions} />
     </>
   );
 }

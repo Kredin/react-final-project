@@ -1,20 +1,6 @@
-import { useEffect, useState } from "react";
 import Transaction from "./Transaction";
 
-function TransactionList() {
-  const [transactions, setTransactions] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/transactions", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => setTransactions(data));
-  }, []);
-
+function TransactionList({ transactions }) {
   return (
     <div>
       <h2>Transaction History</h2>
@@ -25,7 +11,7 @@ function TransactionList() {
             <th>Ticker</th>
             <th>Amount</th>
             <th>Purchase Price</th>
-            <th>Total Invested</th>
+            <th>Total</th>
           </tr>
         </thead>
         <tbody>

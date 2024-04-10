@@ -24,25 +24,13 @@ function App() {
   // }
 
   // fetchstocks();
-  const [transactions, setTransactions] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/Data", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => setTransactions(data.transactions));
-  }, []);
 
   return (
     <>
       <Header />
       <CurrentPositions />
       <WatchList />
-      <TransactionList transactions={transactions} />
+      <TransactionList />
     </>
   );
 }

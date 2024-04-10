@@ -1,32 +1,30 @@
 {
-  "Data": {
-    "transactions": [
-      {
-        "id": 1,
-        "action": "BUY",
-        "ticker": "SPY",
-        "quantity": 5,
-        "price": 716
-      },
-      {
-        "id": 2,
-        "action": "BUY",
-        "ticker": "AAPL",
-        "quantity": 1,
-        "price": 150
-      }
-    ],
-    "positions": [
-      {
-        "id": "SPY",
-        "quantity": 5,
-        "totalPrice": 3580
-      },
-      {
-        "id": "APPL",
-        "quantity": 1,
-        "totalPrice": 150
-      }
-    ]
-  }
+  "transactions": [
+    {
+      "id": "1",
+      "action": "BUY",
+      "ticker": "SPY",
+      "quantity": 5,
+      "price": 716
+    },
+    {
+      "id": "2",
+      "action": "BUY",
+      "ticker": "AAPL",
+      "quantity": 1,
+      "price": 150
+    }
+  ],
+  "positions": [
+    {
+      "id": "SPY",
+      "quantity": 5,
+      "totalPrice": 3580
+    },
+    {
+      "id": "APPL",
+      "quantity": 1,
+      "totalPrice": 150
+    }
+  ]
 }

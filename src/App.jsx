@@ -25,10 +25,23 @@ function App() {
 
   // fetchstocks();
 
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/positions", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setPositions(data));
+  }, []);
+
   return (
     <>
       <Header />
-      <CurrentPositions />
+      <CurrentPositions positions={positions} />
       <WatchList />
       <TransactionList />
     </>

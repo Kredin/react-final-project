@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Transaction from "./Transaction";
 
 function TransactionList() {
-  const [transactions, setTransactions] = useState(fetchTransactions);
+  const [transactions, setTransactions] = useState([]);
 
-  function fetchTransactions() {
+  useEffect(() => {
     fetch("http://localhost:3000/transactions", {
       method: "GET",
       headers: {
@@ -12,9 +13,8 @@ function TransactionList() {
     })
       .then((res) => res.json())
       .then((data) => setTransactions(data));
-  }
+  }, []);
 
-  console.log(transactions);
   return (
     <div>
       <h2>Transaction History</h2>
@@ -29,13 +29,15 @@ function TransactionList() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>BUY</td>
-            <td>SPY</td>
-            <td>5</td>
-            <td>$716</td>
-            <td>$3580</td>
-          </tr>
+          {transactions.map((data) => (
+            <Transaction
+              key={data.id}
+              action={data.action}
+              ticker={data.ticker}
+              quantity={data.quantity}
+              price={data.price}
+            />
+          ))}
         </tbody>
       </table>
     </div>

@@ -18,10 +18,10 @@ function Header({ positions }) {
           Total invested: <span>${totalInvested}</span>
         </h3>
         <h3>
-          Total Worth: <span>$4176</span>
+          Total Worth: <span>$4176!</span>
         </h3>
         <h3>
-          Profits: <span>$446</span>
+          Profits: <span>$446!</span>
         </h3>
       </div>
     </header>

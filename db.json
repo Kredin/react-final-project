@@ -26,5 +26,13 @@
       "quantity": 1,
       "totalPrice": 150
     }
+  ],
+  "watchlist": [
+    {
+      "id": "META"
+    },
+    {
+      "id": "O"
+    }
   ]
 }

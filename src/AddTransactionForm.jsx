@@ -123,10 +123,14 @@ function AddTransactionForm({
         }),
       });
     } else {
-      newPositions = positions.filter((position) => {
-        position.id !== ticker.toUpperCase();
+      setPositions(
+        positions.filter((position) => {
+          return position.id !== ticker.toUpperCase();
+        })
+      );
+      fetch(`http://localhost:3000/positions/${ticker.toUpperCase()}`, {
+        method: "DELETE",
       });
-      setPositions(newPositions);
     }
   }
 

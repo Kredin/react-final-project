@@ -13,6 +13,13 @@
       "ticker": "AAPL",
       "quantity": 1,
       "price": 150
+    },
+    {
+      "id": "0b5e",
+      "action": "SELL",
+      "ticker": "APPL",
+      "quantity": 2,
+      "price": 200
     }
   ],
   "positions": [
@@ -25,14 +32,8 @@
     {
       "id": "APPL",
       "quantity": 2,
-      "totalPrice": 320,
-      "currentPrice": 160
-    },
-    {
-      "id": "META",
-      "quantity": 5,
-      "totalPrice": 2500,
-      "currentPrice": 500
+      "totalPrice": 200,
+      "currentPrice": 200
     }
   ],
   "watchlist": [

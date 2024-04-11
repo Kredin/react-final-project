@@ -1,5 +1,9 @@
-function WatchListItem({ ticker }) {
-  return <h4>{ticker}: $xyz!</h4>;
+function WatchListItem({ ticker, currentPrice }) {
+  return (
+    <h4>
+      {ticker}: ${currentPrice}
+    </h4>
+  );
 }
 
 export default WatchListItem;

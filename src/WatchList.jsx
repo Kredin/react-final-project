@@ -15,13 +15,15 @@ function WatchList() {
       .then((data) => setWatchList(data));
   }, []);
 
-  console.log(watchList);
-
   return (
     <div>
       <h2>Watch List</h2>
       {watchList.map((data) => (
-        <WatchListItem key={data.id} ticker={data.id} />
+        <WatchListItem
+          key={data.id}
+          ticker={data.id}
+          currentPrice={data.currentPrice}
+        />
       ))}
     </div>
   );

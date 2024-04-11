@@ -31,10 +31,12 @@
   ],
   "watchlist": [
     {
-      "id": "META"
+      "id": "META",
+      "currentPrice": 222
     },
     {
-      "id": "O"
+      "id": "O",
+      "currentPrice": 45
     }
   ]
 }

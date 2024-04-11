@@ -13,34 +13,6 @@
       "ticker": "AAPL",
       "quantity": 1,
       "price": 150
-    },
-    {
-      "id": "b36c",
-      "action": "BUY",
-      "ticker": "META",
-      "quantity": 5,
-      "price": 105
-    },
-    {
-      "id": "b5c9",
-      "action": "BUY",
-      "ticker": "SPY",
-      "quantity": 5,
-      "price": 700
-    },
-    {
-      "id": "67dc",
-      "action": "BUY",
-      "ticker": "SPY",
-      "quantity": 5,
-      "price": 700
-    },
-    {
-      "id": "d68f",
-      "action": "BUY",
-      "ticker": "META",
-      "quantity": 5,
-      "price": 101
     }
   ],
   "positions": [
@@ -52,15 +24,15 @@
     },
     {
       "id": "APPL",
-      "quantity": 1,
-      "totalPrice": 150,
+      "quantity": 2,
+      "totalPrice": 320,
       "currentPrice": 160
     },
     {
       "id": "META",
       "quantity": 5,
-      "totalPrice": 505,
-      "currentPrice": 101
+      "totalPrice": 2500,
+      "currentPrice": 500
     }
   ],
   "watchlist": [

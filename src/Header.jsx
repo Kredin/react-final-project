@@ -2,11 +2,19 @@ import { useEffect, useState } from "react";
 
 function Header({ positions }) {
   const [totalInvested, setTotalInvested] = useState(0);
+  const [totalWorth, setTotalWorth] = useState(0);
+  const [profit, setProfit] = useState(0);
 
   useEffect(() => {
-    let total = 0;
-    positions.forEach((e) => (total += e.totalPrice));
-    setTotalInvested(total);
+    let investTotal = 0;
+    let worthTotal = 0;
+    positions.forEach((e) => {
+      investTotal += e.totalPrice;
+      worthTotal += e.currentPrice * e.quantity;
+    });
+    setTotalInvested(investTotal);
+    setTotalWorth(worthTotal);
+    setProfit(worthTotal - investTotal);
   });
 
   return (
@@ -18,10 +26,10 @@ function Header({ positions }) {
           Total invested: <span>${totalInvested}</span>
         </h3>
         <h3>
-          Total Worth: <span>$4176!</span>
+          Total Worth: <span>${totalWorth}</span>
         </h3>
         <h3>
-          Profits: <span>$446!</span>
+          Profits: <span>${profit}</span>
         </h3>
       </div>
     </header>

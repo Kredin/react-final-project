@@ -23,13 +23,13 @@ function Header({ positions }) {
       <div>
         <h2>Balance Sheet</h2>
         <h3>
-          Total invested: <span>${totalInvested}</span>
+          Total Invested: <span>${totalInvested}</span>
         </h3>
         <h3>
-          Total Worth: <span>${totalWorth}</span>
+          Current Total Value: <span>${totalWorth}</span>
         </h3>
         <h3>
-          Profits: <span>${profit}</span>
+          Total Profits: <span>${profit}</span>
         </h3>
       </div>
     </header>

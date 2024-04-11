@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Transaction from "./Transaction";
+import AddTransactionForm from "./AddTransactionForm";
 
 function TransactionList() {
   const [transactions, setTransactions] = useState([]);
@@ -40,6 +41,7 @@ function TransactionList() {
           ))}
         </tbody>
       </table>
+      <AddTransactionForm />
     </div>
   );
 }

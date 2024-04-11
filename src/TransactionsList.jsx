@@ -24,7 +24,7 @@ function TransactionList() {
           <tr>
             <th>Action</th>
             <th>Ticker</th>
-            <th>Amount</th>
+            <th>Quantity</th>
             <th>Purchase Price</th>
             <th>Total</th>
           </tr>
@@ -41,7 +41,10 @@ function TransactionList() {
           ))}
         </tbody>
       </table>
-      <AddTransactionForm />
+      <AddTransactionForm
+        transactions={transactions}
+        setTransactions={setTransactions}
+      />
     </div>
   );
 }

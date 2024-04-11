@@ -8,7 +8,7 @@ function CurrentPositions({ positions }) {
         <thead>
           <tr>
             <th>Ticker</th>
-            <th>Amount</th>
+            <th>Quantity</th>
             <th>Purchase Price</th>
             <th>Total Invested</th>
             <th>Current Price</th>

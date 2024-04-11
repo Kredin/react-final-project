@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Transaction from "./Transaction";
 import AddTransactionForm from "./AddTransactionForm";
 
-function TransactionList() {
+function TransactionList({ positions, setPositions }) {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function TransactionList() {
             <th>Action</th>
             <th>Ticker</th>
             <th>Quantity</th>
-            <th>Purchase Price</th>
+            <th>Price Per Unit</th>
             <th>Total</th>
           </tr>
         </thead>
@@ -44,6 +44,8 @@ function TransactionList() {
       <AddTransactionForm
         transactions={transactions}
         setTransactions={setTransactions}
+        positions={positions}
+        setPositions={setPositions}
       />
     </div>
   );

@@ -42,8 +42,8 @@ function App() {
     <>
       <Header positions={positions} />
       <CurrentPositions positions={positions} />
-      <WatchList />
-      <TransactionList />
+      {/* <WatchList /> */}
+      <TransactionList positions={positions} setPositions={setPositions} />
     </>
   );
 }

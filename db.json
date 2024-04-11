@@ -1,25 +1,53 @@
 {
   "transactions": [
     {
-      "id": "1",
+      "id": "a93c",
       "action": "BUY",
       "ticker": "SPY",
       "quantity": 5,
       "price": 716
     },
     {
-      "id": "2",
+      "id": "ac19",
       "action": "BUY",
       "ticker": "AAPL",
       "quantity": 1,
       "price": 150
+    },
+    {
+      "id": "b36c",
+      "action": "BUY",
+      "ticker": "META",
+      "quantity": 5,
+      "price": 105
+    },
+    {
+      "id": "b5c9",
+      "action": "BUY",
+      "ticker": "SPY",
+      "quantity": 5,
+      "price": 700
+    },
+    {
+      "id": "67dc",
+      "action": "BUY",
+      "ticker": "SPY",
+      "quantity": 5,
+      "price": 700
+    },
+    {
+      "id": "d68f",
+      "action": "BUY",
+      "ticker": "META",
+      "quantity": 5,
+      "price": 101
     }
   ],
   "positions": [
     {
       "id": "SPY",
-      "quantity": 5,
-      "totalPrice": 3580,
+      "quantity": 10,
+      "totalPrice": 7080,
       "currentPrice": 750
     },
     {
@@ -27,6 +55,12 @@
       "quantity": 1,
       "totalPrice": 150,
       "currentPrice": 160
+    },
+    {
+      "id": "META",
+      "quantity": 5,
+      "totalPrice": 505,
+      "currentPrice": 101
     }
   ],
   "watchlist": [

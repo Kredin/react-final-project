@@ -17,6 +17,10 @@ function Header({ positions }) {
     setProfit(worthTotal - investTotal);
   });
 
+  function handleClick() {
+    console.log("clicked!");
+  }
+
   return (
     <header>
       <h1>Stock Dashboard</h1>
@@ -31,6 +35,7 @@ function Header({ positions }) {
         <h3>
           Total Profits: <span>${profit}</span>
         </h3>
+        <button onClick={handleClick}>Update Live Prices</button>
       </div>
     </header>
   );

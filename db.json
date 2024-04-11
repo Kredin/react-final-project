@@ -11,15 +11,8 @@
       "id": "ac19",
       "action": "BUY",
       "ticker": "AAPL",
-      "quantity": 1,
-      "price": 150
-    },
-    {
-      "id": "0b5e",
-      "action": "SELL",
-      "ticker": "APPL",
       "quantity": 2,
-      "price": 200
+      "price": 100
     }
   ],
   "positions": [

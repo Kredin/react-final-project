@@ -19,12 +19,14 @@
     {
       "id": "SPY",
       "quantity": 5,
-      "totalPrice": 3580
+      "totalPrice": 3580,
+      "currentPrice": 750
     },
     {
       "id": "APPL",
       "quantity": 1,
-      "totalPrice": 150
+      "totalPrice": 150,
+      "currentPrice": 160
     }
   ],
   "watchlist": [

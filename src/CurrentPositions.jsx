@@ -23,6 +23,7 @@ function CurrentPositions({ positions }) {
               ticker={position.id}
               quantity={position.quantity}
               totalPrice={position.totalPrice}
+              currentPrice={position.currentPrice}
             />
           ))}
         </tbody>

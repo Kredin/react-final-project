@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Header positions={positions} />
+      <Header positions={positions} setPositions={setPositions} />
       <CurrentPositions positions={positions} />
       {/* <WatchList /> */}
       <TransactionList positions={positions} setPositions={setPositions} />

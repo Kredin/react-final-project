@@ -5,7 +5,7 @@
       "action": "BUY",
       "ticker": "SPY",
       "quantity": 5,
-      "price": 716
+      "price": 416
     },
     {
       "id": "ac19",
@@ -18,12 +18,12 @@
   "positions": [
     {
       "id": "SPY",
-      "quantity": 10,
-      "totalPrice": 7080,
+      "quantity": 5,
+      "totalPrice": 2080,
       "currentPrice": 750
     },
     {
-      "id": "APPL",
+      "id": "AAPL",
       "quantity": 2,
       "totalPrice": 200,
       "currentPrice": 200

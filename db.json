@@ -13,6 +13,13 @@
       "ticker": "AAPL",
       "quantity": 2,
       "price": 100
+    },
+    {
+      "id": "ecf5",
+      "action": "BUY",
+      "ticker": "META",
+      "quantity": 5,
+      "price": 500
     }
   ],
   "positions": [
@@ -27,6 +34,12 @@
       "quantity": 2,
       "totalPrice": 200,
       "currentPrice": 200
+    },
+    {
+      "id": "META",
+      "quantity": 5,
+      "totalPrice": 2500,
+      "currentPrice": 500
     }
   ],
   "watchlist": [

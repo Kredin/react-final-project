@@ -19,7 +19,27 @@ function Header({ positions, setPositions }) {
   });
 
   useEffect(() => {
-    console.log("effect activating");
+    if (livePrices.length > 1) {
+      console.log(livePrices);
+      setPositions(
+        positions.map((position) => {
+          for (let i in positions) {
+            if (livePrices[i].symbol.includes(position.id)) {
+              return {
+                ...position,
+                currentPrice: livePrices[i].price,
+              };
+              console.log(position.id);
+              console.log(livePrices[i]);
+            }
+            console.log("working");
+            // if (position.id == livePrices[i].symbol) {
+            //   console.log(position.id + " + " + livePrices[i]);
+            // }
+          }
+        })
+      );
+    }
   }, [livePrices]);
 
   function handleClick() {
@@ -44,13 +64,6 @@ function Header({ positions, setPositions }) {
     )
       .then((res) => res.json())
       .then((data) => setLivePrices(data.data));
-    // setPositions(
-    //   positions.map((position) => {
-    //     for (let i in positions) {
-    //       console.log(i);
-    //     }
-    //   })
-    // );
   }
 
   return (

@@ -27,19 +27,19 @@
       "id": "SPY",
       "quantity": 5,
       "totalPrice": 2080,
-      "currentPrice": 750
+      "currentPrice": 510.85
     },
     {
       "id": "AAPL",
       "quantity": 2,
       "totalPrice": 200,
-      "currentPrice": 200
+      "currentPrice": 176.55
     },
     {
       "id": "META",
       "quantity": 5,
       "totalPrice": 2500,
-      "currentPrice": 500
+      "currentPrice": 511.9
     }
   ],
   "watchlist": [

@@ -25,6 +25,13 @@ function Header({ positions, setPositions }) {
         positions.map((position) => {
           for (let i in positions) {
             if (livePrices[i].symbol.includes(position.id)) {
+              fetch(`http://localhost:3000/positions/${position.id}`, {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ currentPrice: livePrices[i].price }),
+              });
               return {
                 ...position,
                 currentPrice: livePrices[i].price,
@@ -72,13 +79,13 @@ function Header({ positions, setPositions }) {
       <div>
         <h2>Balance Sheet</h2>
         <h3>
-          Total Invested: <span>${totalInvested}</span>
+          Total Invested: <span>${totalInvested.toFixed(2)}</span>
         </h3>
         <h3>
-          Current Total Value: <span>${totalWorth}</span>
+          Current Total Value: <span>${totalWorth.toFixed(2)}</span>
         </h3>
         <h3>
-          Total Profits: <span>${profit}</span>
+          Total Profits: <span>${profit.toFixed(2)}</span>
         </h3>
         <button onClick={handleClick}>Update Live Prices</button>
       </div>

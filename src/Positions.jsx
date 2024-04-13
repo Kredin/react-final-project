@@ -9,8 +9,8 @@ function Positions({ ticker, quantity, totalPrice, currentPrice }) {
       <td>{ticker}</td>
       <td>{quantity}</td>
       <td>${avgPrice}</td>
-      <td>${totalPrice}</td>
-      <td>${currentPrice}</td>
+      <td>${totalPrice.toFixed(2)}</td>
+      <td>${currentPrice.toFixed(2)}</td>
       <td>${profit}</td>
       <td>{percentage}%</td>
     </tr>

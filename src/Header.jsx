@@ -36,13 +36,7 @@ function Header({ positions, setPositions }) {
                 ...position,
                 currentPrice: livePrices[i].price,
               };
-              console.log(position.id);
-              console.log(livePrices[i]);
             }
-            console.log("working");
-            // if (position.id == livePrices[i].symbol) {
-            //   console.log(position.id + " + " + livePrices[i]);
-            // }
           }
         })
       );
@@ -78,15 +72,17 @@ function Header({ positions, setPositions }) {
       <h1>Stock Dashboard</h1>
       <div>
         <h2>Balance Sheet</h2>
-        <h3>
-          Total Invested: <span>${totalInvested.toFixed(2)}</span>
-        </h3>
-        <h3>
-          Current Total Value: <span>${totalWorth.toFixed(2)}</span>
-        </h3>
-        <h3>
-          Total Profits: <span>${profit.toFixed(2)}</span>
-        </h3>
+        <div id="Balance-Sheet">
+          <h3>
+            Total Invested: <span>${totalInvested.toFixed(2)}</span>
+          </h3>
+          <h3>
+            Current Total Value: <span>${totalWorth.toFixed(2)}</span>
+          </h3>
+          <h3>
+            Total Profits: <span>${profit.toFixed(2)}</span>
+          </h3>
+        </div>
         <button onClick={handleClick}>Update Live Prices</button>
       </div>
     </header>

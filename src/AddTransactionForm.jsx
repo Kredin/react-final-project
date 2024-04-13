@@ -152,6 +152,7 @@ function AddTransactionForm({
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Add Transaction</h2>
       <label>
         Action:
         <select value={action} onChange={(e) => setAction(e.target.value)}>

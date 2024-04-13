@@ -1,6 +1,6 @@
 function Positions({ ticker, quantity, totalPrice, currentPrice }) {
-  const avgPrice = totalPrice / quantity;
-  const profit = (currentPrice - avgPrice) * quantity;
+  const avgPrice = (totalPrice / quantity).toFixed(2);
+  const profit = ((currentPrice - avgPrice) * quantity).toFixed(2);
   const percentage = parseFloat(
     ((currentPrice * quantity) / totalPrice) * 100 - 100
   ).toFixed(2);

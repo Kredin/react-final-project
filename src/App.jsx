@@ -1,30 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+// import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import CurrentPositions from "./CurrentPositions";
 import WatchList from "./WatchList";
+import NavBar from "./NavBar";
 import TransactionList from "./TransactionsList";
 
 function App() {
-  // code to retrieve stock info
-  // const ticker = "spy";
-
-  // const url = `https://real-time-finance-data.p.rapidapi.com/stock-quote?symbol=${ticker}&language=en`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "X-RapidAPI-Key": "7651fb6d83msh26bd200e933c799p1c85d6jsn8db85d0767b3",
-  //     "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com",
-  //   },
-  // };
-
-  // async function fetchstocks() {
-  //   const response = await fetch(url, options);
-  //   const result = await response.text();
-  //   console.log(result);
-  // }
-
-  // fetchstocks();
-
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
@@ -39,12 +21,29 @@ function App() {
   }, []);
 
   return (
-    <>
+    // <div>
+    //   <Header positions={positions} setPositions={setPositions} />
+    //   <NavBar />
+    //   <Switch>
+    //     <Route path="/Positions">
+    //       <CurrentPositions positions={positions} />
+    //     </Route>
+    //     {/* <WatchList /> */}
+    //     <Route path="/Transactions">
+    //       <TransactionList positions={positions} setPositions={setPositions} />
+    //     </Route>
+    //     <Route path="*">
+    //       <h1>404 Not Found</h1>
+    //     </Route>
+    //   </Switch>
+    // </div>
+    <div>
       <Header positions={positions} setPositions={setPositions} />
+      <NavBar />
       <CurrentPositions positions={positions} />
       {/* <WatchList /> */}
       <TransactionList positions={positions} setPositions={setPositions} />
-    </>
+    </div>
   );
 }
 

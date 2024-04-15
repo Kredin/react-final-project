@@ -2,7 +2,7 @@ import Positions from "./Positions";
 
 function CurrentPositions({ positions }) {
   return (
-    <div>
+    <div className="container">
       <h2>Current Positions</h2>
       <table>
         <thead>

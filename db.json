@@ -20,6 +20,34 @@
       "ticker": "META",
       "quantity": 5,
       "price": 500
+    },
+    {
+      "id": "82f2",
+      "action": "BUY",
+      "ticker": "SCG",
+      "quantity": 5,
+      "price": 2
+    },
+    {
+      "id": "9703",
+      "action": "SELL",
+      "ticker": "META",
+      "quantity": 5,
+      "price": 515
+    },
+    {
+      "id": "ff87",
+      "action": "SELL",
+      "ticker": "AAPL",
+      "quantity": 1,
+      "price": 120
+    },
+    {
+      "id": "d430",
+      "action": "SELL",
+      "ticker": "AAPL",
+      "quantity": 1,
+      "price": 120
     }
   ],
   "positions": [
@@ -30,16 +58,10 @@
       "currentPrice": 510.85
     },
     {
-      "id": "AAPL",
-      "quantity": 2,
-      "totalPrice": 200,
-      "currentPrice": 176.55
-    },
-    {
-      "id": "META",
+      "id": "SCG",
       "quantity": 5,
-      "totalPrice": 2500,
-      "currentPrice": 511.9
+      "totalPrice": 10,
+      "currentPrice": 3.16
     }
   ],
   "watchlist": [

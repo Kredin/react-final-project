@@ -17,7 +17,7 @@ function TransactionList({ positions, setPositions }) {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h2>Transaction History</h2>
       <table>
         <thead>

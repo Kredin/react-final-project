@@ -69,7 +69,7 @@ function Header({ positions, setPositions }) {
 
   return (
     <header className="container">
-      <h1>Stock Dashboard</h1>
+      <h1>Blades Stock Dashboard</h1>
       <div>
         <h2>Balance Sheet</h2>
         <div id="Balance-Sheet">

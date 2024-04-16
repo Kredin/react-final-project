@@ -19,7 +19,7 @@ function AddTransactionForm({
       price: price,
     };
 
-    fetch("http://localhost:3000/transactions", {
+    fetch("https://div-dash-json.onrender.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,16 +55,19 @@ function AddTransactionForm({
           }
         })
       );
-      fetch(`http://localhost:3000/positions/${ticker.toUpperCase()}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          quantity: previousQuantity + quantity,
-          totalPrice: previousTotal + quantity * price,
-        }),
-      });
+      fetch(
+        `https://div-dash-json.onrender.com/positions/${ticker.toUpperCase()}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            quantity: previousQuantity + quantity,
+            totalPrice: previousTotal + quantity * price,
+          }),
+        }
+      );
     } else {
       const newPosition = {
         id: ticker.toUpperCase(),
@@ -73,7 +76,7 @@ function AddTransactionForm({
         currentPrice: price,
       };
       setPositions([...positions, newPosition]);
-      fetch("http://localhost:3000/positions", {
+      fetch("https://div-dash-json.onrender.com/positions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,25 +115,31 @@ function AddTransactionForm({
           }
         })
       );
-      fetch(`http://localhost:3000/positions/${ticker.toUpperCase()}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          quantity: previousQuantity - quantity,
-          totalPrice: previousTotal - quantity * price,
-        }),
-      });
+      fetch(
+        `https://div-dash-json.onrender.com/positions/${ticker.toUpperCase()}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            quantity: previousQuantity - quantity,
+            totalPrice: previousTotal - quantity * price,
+          }),
+        }
+      );
     } else {
       setPositions(
         positions.filter((position) => {
           return position.id !== ticker.toUpperCase();
         })
       );
-      fetch(`http://localhost:3000/positions/${ticker.toUpperCase()}`, {
-        method: "DELETE",
-      });
+      fetch(
+        `https://div-dash-json.onrender.com/positions/${ticker.toUpperCase()}`,
+        {
+          method: "DELETE",
+        }
+      );
     }
   }
 

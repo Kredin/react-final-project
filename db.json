@@ -63,15 +63,5 @@
       "totalPrice": 10,
       "currentPrice": 3.16
     }
-  ],
-  "watchlist": [
-    {
-      "id": "META",
-      "currentPrice": 222
-    },
-    {
-      "id": "O",
-      "currentPrice": 45
-    }
   ]
 }

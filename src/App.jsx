@@ -10,7 +10,7 @@ function App() {
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/positions", {
+    fetch("https://div-dash-json.onrender.com/positions", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/Home">
+        <Route exact path="/">
           <Header positions={positions} setPositions={setPositions} />
         </Route>
         <Route path="/Positions">

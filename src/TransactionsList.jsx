@@ -6,7 +6,7 @@ function TransactionList({ positions, setPositions }) {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/transactions", {
+    fetch("https://div-dash-json.onrender.com/transactions", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

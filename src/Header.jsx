@@ -25,7 +25,7 @@ function Header({ positions, setPositions }) {
         positions.map((position) => {
           for (let i in positions) {
             if (livePrices[i].symbol.includes(position.id)) {
-              fetch(`http://localhost:3000/positions/${position.id}`, {
+              fetch(`https://div-dash-json.onrender.com/${position.id}`, {
                 method: "PATCH",
                 headers: {
                   "Content-Type": "application/json",

@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="container">
-      <Link exact to="/">
+      <Link exact to="/react-final-project/">
         Home
       </Link>
-      <Link to="/Positions">Positions</Link>
-      <Link to="/Transactions">Transactions</Link>
-      <Link to="/All">All</Link>
+      <Link to="/react-final-project/Positions">Positions</Link>
+      <Link to="/react-final-project/Transactions">Transactions</Link>
+      <Link to="/react-final-project/All">All</Link>
     </nav>
   );
 }

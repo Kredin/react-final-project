@@ -24,17 +24,17 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/react-final-project/">
           <Header positions={positions} setPositions={setPositions} />
         </Route>
-        <Route path="/Positions">
+        <Route path="/react-final-project/Positions">
           <CurrentPositions positions={positions} />
         </Route>
         {/* <WatchList /> */}
-        <Route path="/Transactions">
+        <Route path="/react-final-project/Transactions">
           <TransactionList positions={positions} setPositions={setPositions} />
         </Route>
-        <Route path="/All">
+        <Route path="/react-final-project/All">
           <Header positions={positions} setPositions={setPositions} />
           <CurrentPositions positions={positions} />
           <TransactionList positions={positions} setPositions={setPositions} />

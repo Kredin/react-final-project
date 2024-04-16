@@ -25,13 +25,16 @@ function Header({ positions, setPositions }) {
         positions.map((position) => {
           for (let i in positions) {
             if (livePrices[i].symbol.includes(position.id)) {
-              fetch(`https://div-dash-json.onrender.com/${position.id}`, {
-                method: "PATCH",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ currentPrice: livePrices[i].price }),
-              });
+              fetch(
+                `https://div-dash-json.onrender.com/positions/${position.id}`,
+                {
+                  method: "PATCH",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ currentPrice: livePrices[i].price }),
+                }
+              );
               return {
                 ...position,
                 currentPrice: livePrices[i].price,
